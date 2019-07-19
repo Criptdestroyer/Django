@@ -11,13 +11,13 @@ import unittest
 
 class Lab1UnitTest(TestCase):
 
-    # def test_hello_name_is_exist(self):
-    #     response = Client().get('/lab-1/')
-    #     self.assertEqual(response.status_code,200)
+    def test_hello_name_is_exist(self):
+        response = Client().get('/lab-1/')
+        self.assertEqual(response.status_code,200)
 
-    # def test_using_index_func(self):
-    #     found = resolve('/lab-1/')
-    #     self.assertEqual(found.func, index)
+    def test_using_index_func(self):
+        found = resolve('/lab-1/')
+        self.assertEqual(found.func, index)
 
     def test_name_is_changed(self):
         request = HttpRequest()
@@ -31,8 +31,6 @@ class Lab1UnitTest(TestCase):
         self.assertEqual(0, calculate_age(date.today().year))
         self.assertEqual(19, calculate_age(2000))
         
-
-
     def test_index_contains_age(self):
         request = HttpRequest()
         response = index(request)

@@ -17,6 +17,8 @@ from django.conf.urls import include
 from django.urls import re_path
 from django.contrib import admin
 from lab_1.views import index as index_lab1
+from django.conf import settings
+from django.conf.urls.static import static
 
 
 urlpatterns = [
@@ -24,4 +26,4 @@ urlpatterns = [
     re_path(r'^lab-1/', include('lab_1.urls')),
     re_path(r'^lab-2/', include('lab_2.urls')),
     re_path(r'^$', index_lab1, name='index')
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
