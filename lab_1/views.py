@@ -1,9 +1,9 @@
 from django.shortcuts import render
 from datetime import datetime, date
 # Enter your name here
-mhs_name = '' # TODO Implement this
+mhs_name = 'Ahmad Emir Alfatah' # TODO Implement this
 curr_year = int(datetime.now().strftime("%Y"))
-birth_date = date() #TODO Implement this, format (Year, Month, Date)
+birth_date = date(2000,1,12) #TODO Implement this, format (Year, Month, Date)
 npm = None # TODO Implement this
 # Create your views here.
 def index(request):
