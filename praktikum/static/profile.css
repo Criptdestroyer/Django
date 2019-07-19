@@ -1,0 +1,19 @@
+body{
+    background-color: #2A979C;
+    text-align: justify;
+}
+
+h1 {
+    color:#47525E;
+    font-family:'Monospace';
+}
+
+.header {
+    margin-top:0;
+    padding:20px 20px 20px 20px;
+}
+
+img{
+    width: 400px;
+    height: 300px;
+}
