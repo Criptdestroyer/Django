@@ -4,3 +4,5 @@ from .views import index
 urlpatterns = [
     re_path(r'^$', index, name='index'),
 ]
+
+
