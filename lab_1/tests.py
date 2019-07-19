@@ -24,7 +24,6 @@ class Lab1UnitTest(TestCase):
         response = index(request)
         html_response = response.content.decode('utf8')
         self.assertIn('<title>' + mhs_name + '</title>', html_response)
-        self.assertIn('<h1>Hello my name is ' + mhs_name + '</h1>', html_response)
         self.assertFalse(len(mhs_name) == 0)
 
 
