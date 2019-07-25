@@ -12,8 +12,7 @@ motivation2 = 'Ilmu yang saya dapatkan nanti jika saya bisa mengikuti kelas ini 
 
 # Create your views here.
 def index(request):
-    response = {'name': mhs_name, 'age': calculate_age(birth_date.year), 'mhs_major':mhs_major, 'birth_year':birth_year, 'motivation':motivation, 'motivation2':motivation2}
-    return render(request, 'index_lab1.html', response)
+    return render(request, "index_lab1.html")
 
 def calculate_age(birth_year):
     return curr_year - birth_year if birth_year <= curr_year else 0

@@ -1,41 +1,617 @@
 {% load static %}
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>{{ name }}</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="{% static 'profile.css' %}">
-    </head>
-    <body>
-        <div class="container px-lg-5">
-            <div class="row justify-content-md-center mx-lg-n5">
-                <div class="header">
-                        <h1>My Profile</h1>
-                </div>   
-            </div>
-            <div class="row mx-lg-n5">
-                    <div class="col-sm-5 py-3 px-lg-5">
-                        <img src="{% static 'me.JPG' %}" alt="">
-                    </div>
-                    <div class="col-sm-7 py-3 px-lg-5">
-                        <h1>{{ name }}</h1>
-                        <h3>{{ mhs_major }}</h3>
-                        <h3>{{ birth_year }}</h3>
-                        <article>I am {{ age }} years old</article>
-                    </div>
-            </div>
-            <div class="row mx-lg-n5">
-                <div class="col py-3 px-lg-5">
-                    <p>{{ motivation }}</p>
-                    <p>{{ motivation2 }}</p>
-                </div>
-            </div>
-        </div>
-    </body>
-</html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<!-- Primary Meta Tags -->
+<title>Criptdestroyer - Ahmad Emir Alfatah</title>
+<meta name="title" content="Criptdestroyer - Ahmad Emir Alfatah">
+<meta name="description" content="Backend Engineer PudingLab
+I am a type of hard worker, diligent and confident person. In learning I have a high spirit, meticulous and quick to understand, especially learning new things. I am able to work under pressure and can work with various parties in one job. In my group I was able to build good communication and create good cooperation, also able to accept constructive criticism and suggestions.">
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://metatags.io/">
+<meta property="og:title" content="Criptdestroyer - Ahmad Emir Alfatah">
+<meta property="og:description" content="Backend Engineer PudingLab
+I am a type of hard worker, diligent and confident person. In learning I have a high spirit, meticulous and quick to understand, especially learning new things. I am able to work under pressure and can work with various parties in one job. In my group I was able to build good communication and create good cooperation, also able to accept constructive criticism and suggestions.">
+<meta property="og:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://metatags.io/">
+<meta property="twitter:title" content="Criptdestroyer - Ahmad Emir Alfatah">
+<meta property="twitter:description" content="Backend Engineer PudingLab
+I am a type of hard worker, diligent and confident person. In learning I have a high spirit, meticulous and quick to understand, especially learning new things. I am able to work under pressure and can work with various parties in one job. In my group I was able to build good communication and create good cooperation, also able to accept constructive criticism and suggestions.">
+<meta property="twitter:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+
+<!-- favicon icon -->
+<link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" />
+
+<!-- inject css start -->
+
+<!--== bootstrap -->
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" />
+
+<link href="https://fonts.googleapis.com/css?family=Nunito:300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"> 
+
+<!--== animate -->
+<link href="{% static 'css/animate.css' %}" rel="stylesheet" type="text/css" />
+
+<!--== fontawesome -->
+<link href="{% static 'css/fontawesome-all.css' %}" rel="stylesheet" type="text/css" />
+
+<!--== line-awesome -->
+<link href="{% static 'css/line-awesome.min.css' %}" rel="stylesheet" type="text/css" />
+
+<!--== magnific-popup -->
+<link href="{% static 'css/magnific-popup/magnific-popup.css' %}" rel="stylesheet" type="text/css" />
+
+<!--== owl-carousel -->
+<link href="{% static 'css/owl-carousel/owl.carousel.css' %}" rel="stylesheet" type="text/css" />
+
+<!--== base -->
+<link href="{% static 'css/base.css' %}" rel="stylesheet" type="text/css" />
+
+<!--== shortcodes -->
+<link href="{% static 'css/shortcodes.css' %}" rel="stylesheet" type="text/css" />
+
+<!--== default-theme -->
+<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" />
+
+<!--== responsive -->
+<link href="{% static 'css/responsive.css' %}" rel="stylesheet" type="text/css" />
+
+<!-- inject css end -->
+
+</head>
+<body>
+
+<!-- page wrapper start -->
+
+<div class="page-wrapper">
+
+<!-- preloader start -->
+
+<div id="ht-preloader">
+  <div class="loader clear-loader">
+    <div class="loader-box"></div>
+    <div class="loader-box"></div>
+    <div class="loader-box"></div>
+    <div class="loader-box"></div>
+    <div class="loader-wrap-text">
+      <div class="text"><span>E</span><span>M</span><span>I</span><span>R</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- preloader end -->
+
+
+<!--header start-->
+<!-- <?php
+  include('template/navbar.php');
+?> -->
+<!--header end-->
+
+
+<!--page title start-->
+
+<section class="page-title o-hidden pos-r md-text-center" data-bg-color="#fbf3ed">
+  <canvas id="confetti"></canvas>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-7 col-md-12">
+        <h1 class="title">Ahmad <span>E</span>mir Alfatah</h1>
+        <p>Just Do It!</p>
+      </div>
+    </div>
+  </div>
+  <div class="page-title-pattern"><img class="img-fluid" src="{% static 'images/bg/11.png' %}" alt=""></div>
+</section>
+
+<!--page title end-->
+
+
+<!--body content start-->
+
+<div class="page-content">
+
+<!--team details start-->
+
+<section class="bg-contain" data-bg-img="images/pattern/03.png">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-5 col-md-12">
+        <div class="team-single">
+          <div class="team-images">
+            <img class="img-center w-100 radius box-shadow" src="{% static 'images/emir3.JPG' %}" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7 col-md-12 md-mt-3">
+        <div class="team-description">
+          <h2 class="title z-index-1 mb-2">Ahmad Emir Alfatah</h2> 
+          <h6 class="text-theme">Backend Engineer PudingLab</h6> 
+          <p class="lead mb-3 text-black">I am a type of hard worker, diligent and confident person. In learning I have a high spirit, meticulous and quick to understand, especially learning new things. I am able to work under pressure and can work with various parties in one job. In my group I was able to build good communication and create good cooperation, also able to accept constructive criticism and suggestions.</p>
+          <!-- <p class="mb-4">consectetur adipisicing eli. Vero quod conseqt quibusdam enim expedita sed quia nesciunt incidunt accusamus necessitatibus modi adipisci officia libero accusantium esse hic obcaecati.</p> -->
+          <ul class="team-icon list-inline mb-4">
+            <li class="mr-3 list-inline-item"> <i class="flaticon-email"></i>
+              <a href="mailto:ahmademir1201@gmail.com">ahmademir1201@gmail.com</a>
+            </li>
+            <!-- <li class="list-inline-item sm-mt-3"> <i class="flaticon-social-media"></i>
+              <a href="tel:+6283187115996">+62-831-8711-5996</a>
+            </li> -->
+          </ul>
+          <div class="social-icons social-colored circle team-social-icon">
+            <ul>
+              <li class="social-linkedin"><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/ahmad-emir-alfatah/"><i class="fab fa-linkedin-in"></i></a>
+              </li>
+              <li class="social-github"><a target="_blank" rel="noopener noreferrer" href="https://github.com/Criptdestroyer"><i class="fab fa-github"></i></a>
+              </li>
+              <li class="social-instagram"><a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/aemiralfath/"><i class="fab fa-instagram"></i></a>
+              </li>
+              <li class="social-twitter"><a target="_blank" rel="noopener noreferrer" href="https://twitter.com/aemiralfath"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li class="social-youtube"><a target="_blank" rel="noopener noreferrer" href="https://bit.ly/2FESUge"><i class="fab fa-youtube"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--team details end-->
+
+
+<!--feature start-->
+
+<section class="pos-r bg-effect o-hidden">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 col-md-12">
+        <div class="section-title">
+          <div class="title-effect">
+            <div class="bar bar-top"></div>
+            <div class="bar bar-right"></div>
+            <div class="bar bar-bottom"></div>
+            <div class="bar bar-left"></div>
+          </div>
+          <!-- <h6>Team Expert</h6> -->
+          <h2 class="title">Skills</h2> 
+        </div>
+        <div class="ht-progress-bar">
+          <h4>Java (NetBeans, Maven, Junit)</h4>
+          <div class="progress" data-value="80">
+            <div class="progress-bar">
+              <div class="progress-parcent"><span>80</span>%</div>
+            </div>
+          </div>
+        </div>
+        <div class="ht-progress-bar">
+          <h4>PHP & Codeigniter Framework</h4>
+          <div class="progress" data-value="85">
+            <div class="progress-bar">
+              <div class="progress-parcent"><span>85</span>%</div>
+            </div>
+          </div>
+        </div>
+        <div class="ht-progress-bar">
+          <h4>Linux & Shell Scripting</h4>
+          <div class="progress" data-value="70">
+            <div class="progress-bar">
+              <div class="progress-parcent"><span>70</span>%</div>
+            </div>
+          </div>
+        </div>
+        <div class="ht-progress-bar">
+          <h4>Git (Github, Gitlab, BitBucket)</h4>
+          <div class="progress" data-value="80">
+            <div class="progress-bar">
+              <div class="progress-parcent"><span>80</span>%</div>
+            </div>
+          </div>
+        </div>
+        <div class="ht-progress-bar">
+          <h4>Competitive Programming</h4>
+          <div class="progress" data-value="70">
+            <div class="progress-bar">
+              <div class="progress-parcent"><span>70</span>%</div>
+            </div>
+          </div>
+        </div>
+        <div class="ht-progress-bar">
+          <h4>Web Development</h4>
+          <div class="progress" data-value="85">
+            <div class="progress-bar">
+              <div class="progress-parcent"><span>85</span>%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-12 md-mt-5">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 mt-4">
+            <div class="featured-item style-3">
+              <div class="featured-icon">
+                <img class="img-center" src="{% static 'images/feature/06.png' %}" alt="">
+              </div>
+              <div class="featured-title">
+                <h5>System Thinking</h5>
+              </div>
+              <div class="featured-desc">
+                <p>I'm good at thinking abstractly, planning system development and putting together system.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 mt-4">
+            <div class="featured-item style-3">
+              <div class="featured-icon">
+                <img class="img-center" src="{% static 'images/feature/03.png' %}" alt="">
+              </div>
+              <div class="featured-title">
+                <h5>Project Lead</h5>
+              </div>
+              <div class="featured-desc">
+                <p>I can manage team, organise projects, create good communication and cooperation in team.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 mt-4">
+            <div class="featured-item style-3">
+              <div class="featured-icon">
+                <img class="img-center" src="{% static 'images/feature/04.png' %}" alt="">
+              </div>
+              <div class="featured-title">
+                <h5>Mentor</h5>
+              </div>
+              <div class="featured-desc">
+                <p>I love helping people to learn code and make them know how to code correctly</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 mt-4">
+            <div class="featured-item style-3">
+              <div class="featured-icon">
+                <img class="img-center" src="{% static 'images/feature/08.png' %}" alt="">
+              </div>
+              <div class="featured-title">
+                <h5>Programming</h5>
+              </div>
+              <div class="featured-desc">
+                <p>I like to code things and apply my ideas to several systems that can useful for many people.</p>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--counter style-1 start-->
+<br><br>
+<section class="p-0 pos-r" data-bg-img="images/pattern/03.png">
+  <div class="container">
+    <div class="row custom-mt-10">
+      <div class="col-lg-8 col-md-12 ml-auto mr-auto">
+        <div class="video-box">
+          <img class="img-fluid" src="{% static 'images/emir.JPG' %}" alt="">
+          <div class="video-btn video-btn-pos"> <a class="play-btn" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=mp6cxX8VTWg"><i class="la la-play"></i></a>
+            <div class="spinner-eff">
+              <div class="spinner-circle circle-1"></div>
+              <div class="spinner-circle circle-2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="pos-r">
+  <div class="hexagon-bg">
+    <div class="hexagon"></div>
+    <div class="hexagon"></div>
+    <div class="hexagon"></div>
+    <div class="hexagon"></div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-6">
+        <div class="counter">
+          <div class="counter-icon">
+          <img class="img-center" src="{% static 'images/counter/01.png' %}" alt="">
+        </div>
+        <div class="counter-desc">
+         <span class="count-number" data-to="5" data-speed="1000">5</span>
+          <h5>Project Done</h5>
+        </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 sm-mt-5">
+        <div class="counter">
+          <div class="counter-icon">
+          <img class="img-center" src="{% static 'images/counter/02.png' %}" alt="">
+        </div>
+        <div class="counter-desc">
+         <span class="count-number" data-to="10" data-speed="1000">10</span>
+          <h5>Experience</h5>
+        </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 md-mt-5">
+        <div class="counter">
+          <div class="counter-icon">
+          <img class="img-center" src="{% static 'images/counter/03.png' %}" alt="">
+        </div>
+        <div class="counter-desc">
+         <span class="count-number" data-to="4" data-speed="1000">4</span>
+          <h5>Awards</h5>
+        </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 md-mt-5">
+        <div class="counter">
+          <div class="counter-icon">
+          <img class="img-center" src="{% static 'images/counter/04.png' %}" alt="">
+        </div>
+        <div class="counter-desc">
+         <span class="count-number" data-to="4" data-speed="1000">4</span>
+          <h5>Organization</h5>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pos-r bg-effect o-hidden">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-12 col-md-12">
+          <div class="section-title">
+            <div class="title-effect">
+              <div class="bar bar-top"></div>
+              <div class="bar bar-right"></div>
+              <div class="bar bar-bottom"></div>
+              <div class="bar bar-left"></div>
+            </div>
+            <h2 class="title">Coding Activities</h2> 
+          </div>
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <figure><embed src="https://wakatime.com/share/@94de3eaa-2a21-4725-87eb-3a6888654cd6/bd880cc6-54a0-4ee1-b6f5-2090953924ab.svg"></embed></figure>
+            </div>
+            <div class="col-lg-6">
+              <figure><embed src="https://wakatime.com/share/@94de3eaa-2a21-4725-87eb-3a6888654cd6/000bc5ec-fa0b-4acd-8685-bdc3f4bb7b15.svg"></embed></figure>
+            </div>
+            <div class="col-lg-6">
+              <figure><embed src="https://wakatime.com/share/@94de3eaa-2a21-4725-87eb-3a6888654cd6/996b3262-9b10-4311-a79e-d8cfab59dbc4.svg"></embed></figure>
+            </div>
+            <div class="col-lg-6">
+              <figure><embed src="https://wakatime.com/share/@94de3eaa-2a21-4725-87eb-3a6888654cd6/d9e788bb-1a81-4a19-8cf4-406ff50dda33.svg"></embed></figure>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="pos-r bg-effect o-hidden">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-12 col-md-12">
+          <div class="section-title">
+            <div class="title-effect">
+              <div class="bar bar-top"></div>
+              <div class="bar bar-right"></div>
+              <div class="bar bar-bottom"></div>
+              <div class="bar bar-left"></div>
+            </div>
+            <h2 class="title">Github Overview</h2>
+          </div>
+          <div class="row align-items-center">
+		<!-- Prepare a container for your calendar. -->
+		<div class="calendar" style="width:100%;">
+    		<!-- Loading stuff -->
+    			Loading the data just for you.
+		</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!--testimonial style-5 start-->
+
+<section class="pos-r o-hidden bg-effect right" data-bg-img="images/pattern/01.png">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12">
+        <div class="testimonial-carousel carousel slide testimonial-2" data-ride="carousel" data-interval="2500">
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="testimonial style-5">
+                <div class="testimonial-img">
+                  <img class="img-center" src="{% static 'images/gheddi.jpeg' %}" alt="">
+                </div>
+                <div class="testimonial-content">
+                  <div class="testimonial-quote"><i class="la la-quote-left"></i>
+                  </div>
+                  <p>Emir is a very good team member. He is able to execute any given task responsibly. He has strong technical skills where he is proficient in many technology stack. He is also a good public speaker and event organizer.
+                    </p>
+                  <div class="testimonial-caption">
+                    <h5>Muhammad Gheddi</h5>
+                    <label>Developer Student Club Lead</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Item -->
+          </div>
+          <!-- End Carousel Inner -->
+        </div>
+        <!-- End Carousel -->
+      </div>
+    </div>
+    
+  </div>
+  <div class="container">
+    <div class="row">
+        <div class="col-lg-3 col-md-6 sm-mt-3">
+            <div class="clients-logo social-instagram">
+                <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/aemiralfath/"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 md-mt-3">
+          <div class="clients-logo social-github">
+              <a target="_blank" rel="noopener noreferrer" href="https://bit.ly/2FESUge"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      <div class="col-lg-3 col-md-6 md-mt-3">
+        <div class="clients-logo social-linkedin">
+            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/ahmad-emir-alfatah/"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 md-mt-3">
+          <div class="clients-logo social-github">
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/Criptdestroyer"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        
+    </div>
+  </div>
+</section>
+
+<div class="page-content">
+
+  <!--contact start-->
+  
+  <section class="contact-info p-0 z-index-1">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-4 col-md-12">
+          <div class="contact-media"> <i class="flaticon-paper-plane"></i><span>Address:</span>
+            <p>Palembang, South Sumatera</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 md-mt-5">
+          <div class="contact-media"> <i class="flaticon-email"></i><span>Email Address</span><a href="mailto:ahmademir1201@gmail.com"> ahmademir1201@gmail.com</a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 md-mt-5">
+          <div class="contact-media"> <i class="flaticon-social-media"></i><span>Phone Number</span><a href="tel:+6283187115996">+62-831-8711-5996</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="o-hidden p-0 custom-mt-10 z-index-0">
+    <div class="container-fluid p-0">
+      <div class="row align-items-center">
+        <div class="col-md-12">
+          <div class="map-canvas iframe-h-2" data-zoom="15" data-lat="-2.9888297" data-lng="104.756857" data-type="roadmap" data-hue="#ffc400" data-title="Envato" data-icon-path="images/marker.png" data-content="Palembang, Indonesia<br><a href='mailto:ahmademir1201@gmail.com'>ahmademir1201@gmail.com</a>"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+</div>
+
+<!-- page wrapper end -->
+
+<!--back-to-top start-->
+
+<div class="scroll-top"><a class="smoothscroll" href="#top"><i class="flaticon-go-up-in-web"></i></a></div>
+
+<!--back-to-top end-->
+
+ 
+<!-- inject js start -->
+
+<!--== jquery -->
+
+<script src="{% static 'js/jquery.3.3.1.min.js' %}"></script>
+<!--== popper -->
+<script src="{% static 'js/popper.min.js' %}"></script>
+
+<!--== bootstrap -->
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+<!--== appear -->
+<script src="{% static 'js/jquery.appear.js' %}"></script> 
+
+<!--== modernizr -->
+<script src="{% static 'js/modernizr.js' %}"></script> 
+
+<!--== easing -->
+<script src="{% static 'js/jquery.easing.min.js' %}"></script> 
+
+<!--== menu --> 
+<script src="{% static 'js/menu/jquery.smartmenus.js' %}"></script>
+
+<!--== owl-carousel -->
+<script src="{% static 'js/owl-carousel/owl.carousel.min.js' %}"></script> 
+
+<!--== magnific-popup --> 
+<script src="{% static 'js/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
+
+<!--== counter -->
+<script src="{% static 'js/counter/counter.js' %}"></script> 
+
+<!--== countdown -->
+<script src="{% static 'js/countdown/jquery.countdown.min.js' %}"></script> 
+
+<!--== confetti -->
+<script src="{% static 'js/confetti.js' %}"></script>
+
+<!--== contact-form -->
+<script src="{% static 'js/contact-form/contact-form.js' %}"></script>
+
+<!--== validate -->
+<script src="{% static 'js/contact-form/jquery.validate.min.js' %}"></script>
+
+<!--== map api -->
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+
+<!--== map -->
+<script src="{% static 'js/map.js' %}"></script>
+
+<!--== wow -->
+<script src="{% static 'js/wow.min.js' %}"></script>
+
+<!--== theme-script -->
+<script src="{% static 'js/theme-script.js' %}"></script>
+<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+
+<script
+  src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"
+></script>
+
+<!-- Optionally, include the theme (if you don't want to struggle to write the CSS) -->
+<link
+   rel="stylesheet"
+   href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
+/>
+
+<script>
+    GitHubCalendar(".calendar", "Criptdestroyer", { responsive: true });
+</script>
+
+<!-- inject js end -->
+
+</body>
+
+</html>

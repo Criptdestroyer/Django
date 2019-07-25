@@ -4,5 +4,5 @@ from .views import index
 #url for app, add your URL Configuration
 
 urlpatterns = [
-#TODO Implement this
+    path(r'^$', index, name='index'),
 ]
